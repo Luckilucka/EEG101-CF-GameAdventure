@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -6,93 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EEG101 - Community Framework Adventure</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        :root {
-            --bordeaux: #7a1739;
-            --pink-bg: #fce4ec;
-            --white: #ffffff;
-        }
-        body {
-            background-color: var(--pink-bg);
-            color: #333;
-            font-family: 'Arial', sans-serif;
-        }
-        .navbar {
-            background-color: var(--bordeaux);
-            padding: 1rem;
-        }
-        .navbar-brand, .nav-link {
-            color: var(--white) !important;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-        .hero-banner {
-            background-color: var(--bordeaux);
-            color: var(--white);
-            padding: 60px 0;
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .section-box {
-            background-color: var(--bordeaux);
-            color: var(--white);
-            padding: 30px;
-            border-radius: 15px;
-            margin-bottom: 30px;
-            height: 100%;
-        }
-        .white-box {
-            background-color: var(--white);
-            padding: 20px;
-            border-radius: 15px;
-            border: 2px solid var(--bordeaux);
-            margin-bottom: 20px;
-        }
-        h2 {
-            color: var(--white);
-            text-transform: uppercase;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        .team-img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 4px solid var(--white);
-            margin-bottom: 10px;
-            object-fit: cover;
-        }
-        .img-placeholder {
-            background-color: #ddd;
-            border: 3px solid var(--bordeaux);
-            border-radius: 10px;
-            width: 100%;
-            height: 250px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            margin-bottom: 15px;
-        }
-        .footer {
-            background-color: var(--bordeaux);
-            color: var(--white);
-            padding: 30px 0;
-            margin-top: 50px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <span class="navbar-brand">EEG101 : Community Framework</span>
-            <div class="collapse navbar-collapse">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#projet">Projet</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#equipe">Notre Équipe</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#outils">Outils</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#ddrs">DDRS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contexte">Le Projet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ux">Démarche UX</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#solution">La Solution</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#equipe">L'Équipe</a></li>
                 </ul>
             </div>
         </div>
@@ -100,135 +28,153 @@
 
     <header class="hero-banner">
         <div class="container">
-            <h1 class="display-4 fw-bold">EEG101 - Manifesto GameAdventure</h1>
-            <p class="lead">Le jeu sérieux au service de la science ouverte et responsable.</p>
+            <h1 class="display-4">EEG101 - ManifestoGameAdventure</h1>
+            <p class="lead mt-3">Un espace virtuel et gamifié pour former la communauté scientifique internationale aux bonnes pratiques de l'EEG.</p>
         </div>
     </header>
 
     <main class="container">
-        <!-- SECTION PROJET -->
-        <section id="projet" class="mb-5">
-            <div class="row g-4">
+        
+        <section id="contexte" class="mb-5">
+            <h2 class="section-title-dark">Le Contexte & L'Objectif</h2>
+            <div class="row g-4 align-items-center">
                 <div class="col-md-7">
-                    <div class="section-box">
-                        <h2>Projet (Problématique)</h2>
-                        <p>L'électroencéphalographie (EEG) manque de standardisation déontologique. Le projet européen <strong>EEG101</strong> vise à instaurer un cadre robuste.</p>
-                        <p><strong>Notre réponse :</strong> Un monde virtuel gamifié sous <em>WorkAdventure</em> pour sensibiliser les scientifiques aux trois axes du manifeste :</p>
-                        <ul>
-                            <li>Validité scientifique</li>
-                            <li>Démocratisation des savoirs</li>
-                            <li>Responsabilité socio-environnementale</li>
-                        </ul>
+                    <div class="white-box">
+                        <h5 class="fw-bold">Le Constat de Départ</h5>
+                        <p>L'électroencéphalographie (EEG) est un outil essentiel en neurosciences, mais ses pratiques manquent de standardisation éthique et méthodologique. Le projet européen <strong>EEG101</strong> a rédigé un "Community Framework" invitant les chercheurs à s'engager sur 3 grands axes.</p>
+                        
+                        <h5 class="fw-bold mt-4">Notre Mission</h5>
+                        <p>Créer un espace virtuel sur <em>WorkAdventure</em> pour engager la communauté. Lors de la conférence de lancement du 6 novembre (73 participants), nous avons observé qu'<strong>une dizaine de scientifiques se sont perdus</strong> ou n'ont pas réussi à s'adapter à l'environnement. L'enjeu cognitique est alors devenu évident : <strong>comment adapter une plateforme de jeu à un public professionnel non initié ?</strong></p>
                     </div>
                 </div>
                 <div class="col-md-5">
-                    <img src="visio.jpeg" alt="Capture de la carte Archipel de l'espace EEG101 sur WorkAdventure" class="img-fluid rounded shadow" style="border: 3px solid var(--bordeaux); width: 100%;">
+                    <div class="section-box">
+                        <h4 class="fw-bold mb-4" style="border-bottom: 1px solid white; padding-bottom:10px;">Les 3 Piliers du Framework</h4>
+                        <ul class="fs-5" style="line-height: 1.8;">
+                            <li>🔬 <strong>Validité scientifique :</strong> Intégrité, robustesse et reproductibilité.</li>
+                            <li>🌍 <strong>Démocratisation :</strong> Accessibilité et inclusion des savoirs.</li>
+                            <li>🌱 <strong>Responsabilité :</strong> Impact socio-environnemental et éthique.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION CCU (MÉTHODOLOGIE) -->
-        <section class="mb-5">
-            <h2 style="color: var(--bordeaux);">Méthodologie : Conception Centrée Utilisateur</h2>
+        <section id="ux" class="mb-5">
+            <h2 class="section-title-dark">Conception Centrée Utilisateur (CCU)</h2>
+            <p class="lead mb-4">Pour répondre à la désorientation observée, nous avons mené des tests utilisateurs rigoureux (protocole d'observation, pensée à voix haute, entretiens) auprès de profils représentatifs (ex: enseignants-chercheurs).</p>
+            
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="white-box">
-                        <h5 class="fw-bold">Observation</h5>
-                        <p>Identification des points de blocage : manque de guidage global, peur de l'erreur en contexte pro, visibilité de l'espace.</p>
+                        <h5>1. Problèmes Identifiés</h5>
+                        <ul>
+                            <li><strong>Peur de l'erreur :</strong> Crainte de cliquer au mauvais endroit dans un contexte professionnel.</li>
+                            <li><strong>Surcharge cognitive :</strong> Déclenchement involontaire des zones audio de proximité.</li>
+                            <li><strong>Désorientation :</strong> Manque d'une vue globale ("map") et incompréhension de l'interface en "franglais".</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="white-box">
-                        <h5 class="fw-bold">Entretien</h5>
-                        <p>Rencontre avec le CEO de WorkAdventure pour explorer les possibilités techniques (PNJ, injection de code, silent zones).</p>
+                        <h5>2. Entretien & Faisabilité</h5>
+                        <p>Nous avons rencontré <strong>le créateur de WorkAdventure (Greg)</strong> pour explorer les limites techniques de l'outil et valider nos idées d'amélioration (gestion des PNJ, silent zones, pop-ups).</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="white-box">
-                        <h5 class="fw-bold">Questionnaire</h5>
-                        <p>Évaluation de la map "test" auprès de profils scientifiques variés pour affiner le tutoriel d'accueil.</p>
+                        <h5>3. Solutions Apportées</h5>
+                        <ul>
+                            <li>Création d'une <strong>Antichambre / Tutoriel</strong> isolée pour tester les commandes sans pression.</li>
+                            <li>Passage d'une carte en "Archipel" à une <strong>topologie en étoile</strong>, beaucoup plus dirigiste.</li>
+                            <li>Utilisation de <strong>Genially</strong> pour des mini-jeux clairs et encapsulés.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION ÉQUIPE -->
+        <section id="solution" class="mb-5">
+            <div class="section-box">
+                <h2>Le Parcours Gamifié Final</h2>
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p>Notre carte structure l'apprentissage en plusieurs étapes claires :</p>
+                        <ol style="font-size: 1.1rem; line-height: 1.8;">
+                            <li><strong>L'Antichambre :</strong> Espace d'apparition avec présentation vidéo et prise en main des contrôles.</li>
+                            <li><strong>L'Agora :</strong> Zone centrale ("General meeting room") pour les conférences orales.</li>
+                            <li><strong>Les 3 Îles Thématiques :</strong> Chaque île représente un pilier du manifeste et propose une "review" d'article falsifié via Genially pour sensibiliser aux failles scientifiques.</li>
+                            <li><strong>La Silent Zone :</strong> Espace sans interaction vocale pour lire tranquillement la documentation.</li>
+                            <li><strong>La Zone de Signature :</strong> Le but ultime du parcours, où le chercheur signe le Community Framework.</li>
+                        </ol>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="visio.jpeg" alt="Carte finale WorkAdventure EEG101" class="img-fluid map-img mb-3">
+                        <p class="small text-white"><em>Aperçu de la map WorkAdventure et de l'intégration visio.</em></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="white-box">
+                        <h2 class="section-title-dark fs-4">Outils & Contraintes</h2>
+                        <ul class="mb-0">
+                            <li><strong>WorkAdventure :</strong> Moteur 2D imposant des images légères et limitant les utilisateurs simultanés (15 max hors événement).</li>
+                            <li><strong>Tiled :</strong> Logiciel de mapping pour concevoir l'architecture de la carte.</li>
+                            <li><strong>Genially for Education :</strong> Outil de création de contenu interactif intégré via iframes dans la map.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="white-box" style="border-color: #2e7d32;">
+                        <h2 class="section-title-dark fs-4" style="color: #2e7d32; border-bottom-color: #2e7d32;">Engagement DD&RS</h2>
+                        <p>Ce projet s'inscrit pleinement dans une démarche de Responsabilité Sociétale et Environnementale :</p>
+                        <ul class="mb-0">
+                            <li><strong>Écologie :</strong> Espace de conférence virtuel limitant les déplacements internationaux en avion.</li>
+                            <li><strong>Social :</strong> Outil en libre accès favorisant la démocratisation des connaissances scientifiques.</li>
+                            <li><strong>Éthique :</strong> Promotion de la transparence et de la reproductibilité des données (Validité scientifique).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="equipe" class="mb-5">
             <div class="section-box text-center">
-                <h2>Notre Équipe</h2>
-                <div class="row pt-4">
-                    <div class="col-md-3">
-                        <img src="charline.png" alt="Avatar de Charline Ingrand" class="team-img mx-auto shadow">
-                        <p class="fw-bold mt-2">Charline Ingrand</p>
-                    </div>
-
-                    <div class="col-md-3">
-                        <img src="louna.png" alt="Avatar de Louna Morlans" class="team-img mx-auto shadow">
-                        <p class="fw-bold mt-2">Louna Morlans</p>
-                    </div>
-
-                    <div class="col-md-3">
-                        <img src="jojo.jpeg" alt="Avatar de Josépha Pfleger" class="team-img mx-auto shadow">
-                        <p class="fw-bold mt-2">Josépha Pfleger</p>
-                    </div>
-
-                    <div class="col-md-3">
-                        <img src="lulu.jpeg" alt="Avatar de Lucaïna Rakotomalala" class="team-img mx-auto shadow">
-                        <p class="fw-bold mt-2">Lucaïna Rakotomalala</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION OUTILS -->
-        <section id="outils" class="mb-5">
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="white-box h-100">
-                        <h5 class="fw-bold" style="color: var(--bordeaux);">Outils Techniques</h5>
-                        <ul>
-                            <li><strong>WorkAdventure :</strong> Plateforme de monde virtuel 2D.</li>
-                            <li><strong>Tiled :</strong> Éditeur de cartes pour la conception des niveaux.</li>
-                            <li><strong>Genially :</strong> Pour les mini-jeux interactifs et le contenu éducatif.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="white-box h-100">
-                        <h5 class="fw-bold" style="color: var(--bordeaux);">Gestion de Projet</h5>
-                        <p>Réunions bi-mensuelles avec les clients (CNRS) et tuteur (ENSC). Utilisation de Google Drive pour le partage des livrables et rapports.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION DDRS -->
-        <section id="ddrs" class="mb-5">
-            <div class="section-box">
-                <h2>Engagement DDRS</h2>
+                <h2>L'Équipe de Projet</h2>
+                <p class="mb-5">Étudiantes en 1ère année à l'ENSC - Bordeaux INP</p>
                 <div class="row">
-                    <div class="col-md-8">
-                        <p>Le projet <em>Manifesto GameAdventure</em> s'inscrit dans une démarche de Responsabilité Sociétale et Environnementale :</p>
-                        <ul>
-                            <li><strong>Écologie :</strong> Réduction de l'empreinte carbone grâce à l'organisation de conférences virtuelles mondiales.</li>
-                            <li><strong>Social :</strong> Démocratisation des savoirs via un accès libre et inclusif à la formation scientifique.</li>
-                            <li><strong>Éthique :</strong> Sensibilisation à l'intégrité des données et à la déontologie en recherche neuroscientifique.</li>
-                        </ul>
+                    <div class="col-md-3">
+                        <img src="charline.png" alt="Charline Ingrand" class="team-img">
+                        <p class="fw-bold mt-2 mb-0">Charline Ingrand</p>
                     </div>
-                    <div class="col-md-4 text-center">
-                        <div style="background:white; border-radius:10px; padding:10px; color:var(--bordeaux); font-weight:bold;">
-                            LABELLISÉ DD&RS
-                        </div>
+                    <div class="col-md-3">
+                        <img src="louna.png" alt="Louna Morlans" class="team-img">
+                        <p class="fw-bold mt-2 mb-0">Louna Morlans</p>
+                        <p class="small text-white-50">Resp. Communication</p>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="jojo.jpeg" alt="Josépha Pfleger" class="team-img">
+                        <p class="fw-bold mt-2 mb-0">Josépha Pfleger</p>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="lulu.jpeg" alt="Lucaïna Rakotomalala" class="team-img">
+                        <p class="fw-bold mt-2 mb-0">Lucaïna Rakotomalala</p>
                     </div>
                 </div>
             </div>
         </section>
+
     </main>
 
     <footer class="footer text-center">
         <div class="container">
-            <p class="mb-0">Projet Transdisciplinaire 1A ENSC - 2025-2026</p>
-            <p class="small">Clients : Alexandra Corneyllie & Maximilien Chaumon | Tuteur : Pierre-Alexandre Favier</p>
+            <p class="mb-1 fw-bold fs-5">Projet Transdisciplinaire 1A ENSC - 2025/2026</p>
+            <p class="mb-2"><strong>Clients :</strong> Alexandra Corneyllie & Maximilien Chaumon (CNRS) | <strong>Tuteur :</strong> Pierre-Alexandre Favier</p>
+            <p class="small text-white-50 mb-0">Soutenance du projet - Juin 2026</p>
         </div>
     </footer>
 
